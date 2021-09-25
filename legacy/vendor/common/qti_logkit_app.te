@@ -49,7 +49,7 @@ userdebug_or_eng(`
 
   # Access to tombstone segfaults
   allow qti_logkit_app tombstone_data_file:dir r_dir_perms;
-  allow qti_logkit_app tombstone_data_file:file r_file_perms;
+  allow qti_logkit_app tombstone_data_file:file { getattr read };
   diag_use(qti_logkit_app)
 ')
 
